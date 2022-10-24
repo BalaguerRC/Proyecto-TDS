@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from "react";
 import fire from "./ConfiguracionFirebase";
 import "firebase/auth";
+import Products from "../react-files/Products";
 //import Login from "./Login";
 //import Muro from "./Muro";
 
@@ -27,7 +28,7 @@ const Home =()=>{
                 <button id="button3" onClick={cerrarSesion}>logout</button>
             </div>
             <div>
-                
+                <Products/>
             </div>
         </div>
     );

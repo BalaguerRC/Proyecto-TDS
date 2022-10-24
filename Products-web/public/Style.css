@@ -1,0 +1,111 @@
+*{
+    padding: 0px;
+    margin: 0px;
+  
+    
+}
+
+.nabar{
+    list-style: none;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 55px;
+    justify-content: stretch;
+    background-color: aquamarine;
+
+}
+
+.navbar{
+    padding-left: 25px;
+    padding-top: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-style: inherit;
+   
+    
+}
+.paragraph-skills{
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.skills_container{
+
+    width: 600px;
+    margin: 0;
+    padding: 10px;
+
+
+}
+
+.container-skills{
+
+    width: 130%;
+    background-color: #45567d;
+}
+
+.skills{
+    text-align: right;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+
+}
+
+.bebidas_sin{
+    background-color: #FF5733;
+    animation: bebidas_sin 2s forwards;
+}
+
+.picaderas {
+    background-color: #2196f3;
+    animation: picaderas 2s forwards;
+}
+
+.bebidas_con {
+    background-color: #dbd803;
+    animation: bebidas_con 2s forwards;
+}
+
+.uten_cas {
+    background-color: #0a72c7;
+    animation: uten_cas 2s forwards;
+}
+
+.alim_cool {
+    background-color: #a036f7;
+    animation: alim_cool 2s forwards;
+
+}
+.empanada_quipe{
+    background-color: rgb(18, 187, 26);
+    animation: empanada_quipe 2s forwards;
+}
+
+@keyframes picaderas {
+    0%{width: 0;}
+    100%{width: 70%;}
+}
+@keyframes bebidas_sin {
+    0%{width: 0;}
+    100%{width: 100%;}
+}
+@keyframes bebidas_con {
+    0%{width: 0;}
+    100%{width: 95%;}
+}
+@keyframes uten_cas {
+    0%{width: 0;}
+    100%{width: 30%;}
+}
+@keyframes alim_cool {
+    0%{width: 0;}
+    100%{width: 60%;}
+}
+
+@keyframes empanada_quipe {
+    0%{width: 0;}
+    100%{width: 90%;}
+    
+}
