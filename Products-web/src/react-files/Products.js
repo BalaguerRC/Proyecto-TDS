@@ -13,25 +13,26 @@ const Products=()=>{
     }
 
     useEffect(()=>{
-
-        
         const listado=[]
         basededato.collection('productos').get().then(result=>{
             result.forEach(post=>{
                 listado.push(post.data());
             })
-            
+            setPost(listado); 
          }).catch(error=>console.error(error));
     }, []);
 
     return(
-        <div>
-            {
+        <div id="div3">
+            <div id="test">
+                {
                 post1 && post1.slice().reverse().map((post,i)=>{
                     const {titulo,descripcion,precio}= post
                     return(<Post key={i} titulo={titulo} descripcion={descripcion} precio={precio}/>)
                 })
-            }
+                }
+            </div>
+            
         </div>
     );
 }
