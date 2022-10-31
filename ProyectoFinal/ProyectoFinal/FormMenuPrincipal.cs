@@ -25,5 +25,14 @@ namespace ProyectoFinal
         {
             //toolstripfecha.Text= DataTime.Now.ToString()
         }
+
+        private void btnCorreo_Click(object sender, EventArgs e)
+        {
+            FormCorreo correo = new FormCorreo();
+            correo.TopLevel = false;
+            correo.Dock= DockStyle.Fill;
+            panelMostrar.Controls.Add(correo);
+            correo.Show();
+        }
     }
 }
