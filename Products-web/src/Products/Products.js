@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from "react";
 import { basededato } from "../Login/ConfiguracionFirebase";
 import Post from "./post";
+import EnviarP from "./EnviarP";
 
 const Products=()=>{
 
@@ -22,17 +23,22 @@ const Products=()=>{
          }).catch(error=>console.error(error));
     }, []);
 
+    //div3
     return(
-        <div id="div3">
+        <div >
+            <div id="envio">
+                <EnviarP AddPost={AddPost}/>
+            </div>
+            <div className="Productos">
             <div id="test">
                 {
                 post1 && post1.slice().reverse().map((post,i)=>{
-                    const {titulo,descripcion,precio}= post
-                    return(<Post key={i} titulo={titulo} descripcion={descripcion} precio={precio}/>)
+                const {titulo,descripcion,precio}= post
+                return(<Post key={i} titulo={titulo} descripcion={descripcion} precio={precio}/>)
                 })
                 }
             </div>
-            
+            </div>
         </div>
     );
 }

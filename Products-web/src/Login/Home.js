@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from "react";
 import fire from "./ConfiguracionFirebase";
 import "firebase/auth";
-import Products from "../react-files/Products";
+import Products from "../Products/Products";
 //import Login from "./Login";
 //import Muro from "./Muro";
 
@@ -22,6 +22,7 @@ const Home =()=>{
       },[]);
     return(
         <div>
+            <div></div>
             <div id="muestra">
                 <h2>Bienvenido {userF}</h2>
 
