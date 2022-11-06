@@ -78,7 +78,7 @@ button {
   cursor: pointer;
 }
 
-#button2{
+.button2{
   border: none;
   outline: none;
   width: 50%;
@@ -100,7 +100,7 @@ button {
   color: red;
 }
 
-#button3 {
+.button3 {
   border: none;
   outline: none;
   display: grid;

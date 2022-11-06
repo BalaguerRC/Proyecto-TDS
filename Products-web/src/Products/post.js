@@ -16,7 +16,7 @@ function Post({titulo,descripcion,precio}){
                                 RD$ {precio}
                              </div>
                              <div>
-                                 <button className="btn" id="button3">Comprar</button>
+                                 <button className="btn button3">Comprar</button>
                              </div>
                         </div>
                     </div>

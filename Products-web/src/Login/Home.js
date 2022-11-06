@@ -27,7 +27,7 @@ const Home =()=>{
                 <h2 className="navbar-brand">Bienvenido</h2>
                 <a>Usuario: {userF}</a>
 
-                <button className="btn" id="button3" onClick={cerrarSesion}>Cerrar Sesion</button>
+                <button className="btn button3" onClick={cerrarSesion}>Cerrar Sesion</button>
             </nav>
             <div>
                 <Products/>

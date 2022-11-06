@@ -67,12 +67,12 @@ const Login =(props)=>{
                     <label id="label">Password</label>
                     <input type="password" id="passwordField"/>
                     <p id="error">{errorPassword}</p>
-                    <button type="submit">{registro ? "Registrate" : "Inicia sesion"}</button>
+                    <button className="btn button3" type="submit">{registro ? "Registrate" : "Inicia sesion"}</button>
 
                 </form>
                 
                 <div id="btnContainer">
-                <button id="button2" onClick={()=> setRegistro(!registro)}>{registro ? "Tienes cuenta? Inicia sesion" : "No tienes cuenta? Registrate"}</button>
+                <button className="btn button2" onClick={()=> setRegistro(!registro)}>{registro ? "Tienes cuenta? Inicia sesion" : "No tienes cuenta? Registrate"}</button>
                 </div>
                 
             </div>
