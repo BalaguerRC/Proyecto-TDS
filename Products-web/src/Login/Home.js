@@ -23,11 +23,12 @@ const Home =()=>{
     return(
         <div>
             <div></div>
-            <div id="muestra">
-                <h2>Bienvenido {userF}</h2>
+            <nav className="navbar navbar-expand-lg bg-dark sticky-top" id="muestra">
+                <h2 className="navbar-brand">Bienvenido</h2>
+                <a>Usuario: {userF}</a>
 
-                <button id="button3" onClick={cerrarSesion}>logout</button>
-            </div>
+                <button className="btn" id="button3" onClick={cerrarSesion}>Cerrar Sesion</button>
+            </nav>
             <div>
                 <Products/>
             </div>

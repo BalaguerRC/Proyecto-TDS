@@ -104,9 +104,9 @@ button {
   border: none;
   outline: none;
   display: grid;
-  width:10%;
   float: right;
-  padding: 15px 0;
+  width: auto;
+  padding: 15px 20px;
   color: #fff;
   font-size: 16px;
   letter-spacing: 1px;
@@ -121,36 +121,17 @@ button {
 #muestra{
   color: white;
   background: rgb(19, 30, 54);
-  width: auto;
-  padding: 20px 40px;
+  width: 100%;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-
-#div2{
-  display: grid;
-  align-items: center;
-  background-color: #202020;
-  padding: 15px;
-  border-radius: 20px;
-  box-shadow: 15px 10px 0px 5px #00000033;
-  margin: 25px;
+#muestra h2{
   color: white;
 }
-#chat{
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  background-color: #242535;
-  padding: 15px;
-  border-radius: 20px;
-  float: right;
-  box-shadow: 15px 10px 0px 5px #00000033;
-  margin: 30px;
-  width: 300px;
-}
+
+
 #div3{
   justify-content: center;
   align-items: center;
@@ -160,14 +141,27 @@ button {
 #envio{
   color: white;
   background-color: #242535;
-  padding: 30px;
+  padding: 20px;
   border-radius: 20px;
   display: grid;
   margin: 30px;
   float: left;
   box-shadow: 15px 10px 0px 5px #00000033;
-  width: 400px;
-  
+  width: auto;
+}
+.boton-envio{
+  float: right;
+  border: none;
+  outline: none;
+  display: grid;
+  align-items: center;
+  width:30%;
+  padding: 10px 9px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: #134167;
+  cursor: pointer;
 }
 #user{
   background-color: #1f496b;
@@ -221,7 +215,7 @@ button {
   gap:1rem 2rem;
 }
 #test2{
-  display: grid;
+  display: flex;
   align-items: center;
   justify-content: center;
   background-color: #242535;
@@ -233,4 +227,23 @@ button {
   width: 300px;
   color: #fff;
   
+}
+#test{
+  display: flex;
+  flex-wrap: wrap;
+}
+#div2{
+  display: grid;
+  align-items: center;
+  width: 18rem;
+  background-color: #202020;
+  padding: 15px;
+  border-radius: 20px;
+  max-width:80%;
+  box-shadow: 15px 10px 0px 5px #00000033;
+  margin: 25px;
+  color: white;
+}
+#div2:hover{
+  border: 6px solid #1f496b;
 }

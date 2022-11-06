@@ -25,7 +25,7 @@ const Products=()=>{
 
     //div3
     return(
-        <div >
+        <div>
             <div id="envio">
                 <EnviarP AddPost={AddPost}/>
             </div>

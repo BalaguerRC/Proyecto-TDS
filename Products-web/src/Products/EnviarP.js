@@ -33,7 +33,7 @@ function EnviarP({AddPost}){
                 <p></p>
                 <input ref={Price} type="text" placeholder="Precio"></input>
                 <p></p>
-                <button onClick={agregarpost}>Enviar</button>
+                <button className="btn boton-envio" onClick={agregarpost}>Enviar</button>
             </div>
         </div>
     )
