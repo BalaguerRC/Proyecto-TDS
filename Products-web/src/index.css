@@ -112,8 +112,8 @@ button {
   letter-spacing: 1px;
   background: #603bbb;
   cursor: pointer;
+  margin-top: 3px;
 }
-
 #btnContainer {
   width: 100%;
   padding: 24px 0;
@@ -122,7 +122,7 @@ button {
   color: white;
   background: rgb(19, 30, 54);
   width: 100%;
-  padding: 10px 20px;
+  padding: 8px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -163,20 +163,29 @@ button {
   background: #134167;
   cursor: pointer;
 }
-#user{
+.Titulo{
   background-color: #1f496b;
   padding: 5px;
-  border-radius: 20px;
+  border-radius: 5px;
 }
+.ParrafoCentro{
+  text-align: center;
+}
+/*Botones*/
+.btnDelete{
+  margin-left: 3px;
+}
+
 
 
 
 /*-------test------*/
 
 .Productos{
-  padding: 5rem 2rem;
   margin:0 auto;
   display: grid;
+  margin-left: 6%;
+  margin-right: 5%;
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
   gap: 3rem 1rem;
   box-sizing: border-box;

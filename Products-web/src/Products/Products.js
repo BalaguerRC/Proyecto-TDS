@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import { basededato } from "../Login/ConfiguracionFirebase";
 import Post from "./post";
 import EnviarP from "./EnviarP";
+import Post_Admin from "./Post-Admin";
 
 const Products=()=>{
 
@@ -34,7 +35,7 @@ const Products=()=>{
                 {
                 post1 && post1.slice().reverse().map((post,i)=>{
                 const {titulo,descripcion,precio}= post
-                return(<Post key={i} titulo={titulo} descripcion={descripcion} precio={precio}/>)
+                return(<Post_Admin key={i} titulo={titulo} descripcion={descripcion} precio={precio}/>)
                 })
                 }
             </div>

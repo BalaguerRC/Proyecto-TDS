@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import fire from "./ConfiguracionFirebase";
 import "firebase/auth";
+import Products_View from "../Products/Products-View";
 //import Home from "./Home";
 
 const Login =(props)=>{
@@ -52,6 +53,12 @@ const Login =(props)=>{
         if(registro){
             crearUsuario(correo,password);
         } else{
+            if(correo=="admin@gmail.com"){
+                console.log("Administrador: ", correo);
+            }
+            else{
+                console.log("Visitante: ", correo);
+            }
             iniciarSesion(correo,password);
         }
     };
