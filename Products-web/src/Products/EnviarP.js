@@ -18,7 +18,7 @@ function EnviarP({AddPost}){
         Title.current.value="";
         descripcion.current.value="";
         Price.current.value="";
-        AddPost(post)
+        AddPost(post);
     }
     return(
         <div>
