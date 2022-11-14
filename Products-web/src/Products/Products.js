@@ -5,9 +5,13 @@ import EnviarP from "./EnviarP";
 import Post_Admin from "./Post-Admin";
 
 const Products = () => {
-
-    const [post1, setPost] = useState([]);
+//test
     const [postID, setPostID] = useState([]);
+
+
+//test
+    const [post1, setPost] = useState([]);
+    
 
     const AddPost = (post) => {
         const tempPost = post1.slice();
@@ -19,14 +23,14 @@ const Products = () => {
         const listado = []
         basededato.collection('productos').get().then(result => {
             result.forEach(post => {
+                //console.log(post.data());
                 listado.push(post.data());
                 //console.log(post.id);
             })
             setPost(listado);
-            console.log(listado);
+            //console.log(listado);
             
         }).catch(error => console.error(error));
-
     }, []);
 
     //div3
@@ -39,7 +43,6 @@ const Products = () => {
                 <div id="test">
                     {
                         post1 && post1.slice().reverse().map((post, i) => {
-                            
                             const {titulo, descripcion, precio } = post
                             return (
                                 <Post_Admin key={i} id={i} titulo={titulo} descripcion={descripcion} precio={precio} />)

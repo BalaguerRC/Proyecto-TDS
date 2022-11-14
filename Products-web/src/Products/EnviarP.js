@@ -20,6 +20,7 @@ function EnviarP({AddPost}){
         Price.current.value="";
         AddPost(post);
     }
+    
     return(
         <div>
             <h1>Enviar un producto</h1>
@@ -28,6 +29,8 @@ function EnviarP({AddPost}){
             </div>
             <div>
                 <input ref={Title} type="text" placeholder="Titulo"></input>
+                <p></p>
+                <input type="text" placeholder="Link Imagen"></input>
                 <p></p>
                 <input ref={descripcion} type="text" placeholder="Descripcion"></input>
                 <p></p>

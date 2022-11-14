@@ -171,6 +171,9 @@ button {
 .ParrafoCentro{
   text-align: center;
 }
+.ID{
+  color: red;
+}
 /*Botones*/
 .btnDelete{
   margin-left: 3px;
