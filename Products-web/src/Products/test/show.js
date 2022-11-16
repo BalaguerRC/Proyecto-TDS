@@ -1,13 +1,13 @@
-import React, { useState, useEffect,useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { collection, getDocs, getDoc, deleteDoc, doc, updateDoc } from 'firebase/firestore';
 import { db } from "../../Login/ConfiguracionFirebase";
 import { async } from "@firebase/util";
 import EnviarP from "../EnviarP";
 
 const Show = () => {
-    const Descripcion=useRef(null);
-    const Title=useRef(null);
-    const Price=useRef(null);
+    const Descripcion = useRef(null);
+    const Title = useRef(null);
+    const Price = useRef(null);
 
     const [produc, setProduc] = useState([]);
     const producCollectionRef = collection(db, 'productos');
@@ -35,11 +35,11 @@ const Show = () => {
             descripcion: descripcion,
             precio: precio
         }
-        Title.current.value=pos.titulo;
-        Descripcion.current.value=pos.descripcion;
-        Price.current.value=pos.precio;
+        Title.current.value = pos.titulo;
+        Descripcion.current.value = pos.descripcion;
+        Price.current.value = pos.precio;
         SetMostrar(pos);
-        
+
         //console.log(pos);
     }
     const EditarPost = async (id, titulo, descripcion, precio) => {
@@ -63,12 +63,13 @@ const Show = () => {
                 <EnviarP AddPost={AddPost} />
             </div>
             <div className="Productos">
-                {produc.map((produc) => {
-                    return (
-                        <div id="test">
-                            <div className="producto_footer1" key={produc.id}>
-                                <div id="div2">
-                                    <p className="ID">ID: {produc.id}</p>
+                <div id="test">
+                    {produc.map((produc) => {
+                        return (
+
+                            <div className="producto_footer" key={produc.id}>
+                                <div id="div2" className="card">
+                                    <h3 className="ID">ID: {produc.id}</h3>
                                     <div className="Titulo">Titulo: {produc.titulo}</div>
                                     <p className="card-text" >Descripcion: {produc.descripcion}</p>
                                     <div>RD$ {produc.precio}</div>
@@ -76,9 +77,10 @@ const Show = () => {
                                     <button type="button" className="btn btn-danger btnDelete" onClick={() => { deletePost(produc.id) }}>Borrar</button>
                                 </div>
                             </div>
-                        </div>
-                    );
-                })}
+
+                        );
+                    })}
+                </div>
             </div>
             <div>
                 <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -100,11 +102,11 @@ const Show = () => {
                                 <form>
                                     <div className="mb-3">
                                         <label for="recipient-name" className="col-form-label">Titulo:</label>
-                                        <input ref={Title} type="text" className="form-control" id="recipient-name"/>
+                                        <input ref={Title} type="text" className="form-control" id="recipient-name" />
                                     </div>
                                     <div className="mb-3">
                                         <label for="recipient-name" className="col-form-label">Precio:</label>
-                                        <input ref={Price} type="text" className="form-control" id="recipient-name"/>
+                                        <input ref={Price} type="text" className="form-control" id="recipient-name" />
                                     </div>
                                     <div className="mb-3">
                                         <label for="message-text" className="col-form-label">Descripcion:</label>
@@ -114,7 +116,7 @@ const Show = () => {
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button className="btn btn-primary" onClick={()=>{EditarPost(mostrar.id,Title.current.value,Descripcion.current.value,Price.current.value)}} data-bs-dismiss="modal">Editar</button>
+                                <button className="btn btn-primary" onClick={() => { EditarPost(mostrar.id, Title.current.value, Descripcion.current.value, Price.current.value) }} data-bs-dismiss="modal">Editar</button>
                             </div>
                         </div>
                     </div>

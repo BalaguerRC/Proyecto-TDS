@@ -3,6 +3,7 @@ import fire from "./ConfiguracionFirebase";
 import "firebase/auth";
 import Products from "../Products/Products";
 import Show from "../Products/test/show";
+import Products_View from "../Products/Products-View";
 //import Login from "./Login";
 //import Muro from "./Muro";
 
@@ -23,23 +24,36 @@ const Home = () => {
     }, []);
     return (
         <div>
-            <div></div>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="muestra">
-                <h2 className="navbar-brand">Bienvenido</h2>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="muestraVisitante">
                 <div class="container-fluid">
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
+                    <a class="navbar-brand" href="#">Market</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav flex-row flex-wrap">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="Vista.html">test</a>
+                                <a class="nav-link" href="Vista.html">Graphic</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    User
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" data-bs-popper="static">
+                                    <li><a class="dropdown-item">{userF}</a></li>
+                                    <li><hr className="dropdown-divider" /></li>
+                                    <li><a class="dropdown-item" onClick={cerrarSesion}>Cerrar Sesion</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <a>Usuario: {userF}</a>
-                <button className="btn button3" onClick={cerrarSesion}>Cerrar Sesion</button>
+
             </nav>
             <div>
                 <Show />
