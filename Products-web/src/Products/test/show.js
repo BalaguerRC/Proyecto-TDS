@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { collection, getDocs, getDoc, deleteDoc, doc, updateDoc } from 'firebase/firestore';
+import { collection, getDocs, getDoc, deleteDoc, doc, updateDoc, addDoc } from 'firebase/firestore';
 import { db } from "../../Login/ConfiguracionFirebase";
 import { async } from "@firebase/util";
 import EnviarP from "../EnviarP";
@@ -8,6 +8,12 @@ const Show = () => {
     const Descripcion = useRef(null);
     const Title = useRef(null);
     const Price = useRef(null);
+    const Descripcion2 = useRef(null);
+    const Title2 = useRef(null);
+    const Price2 = useRef(null);
+    const [newtitulo, setTitulo] = useState(null);
+    const [newdescripcion, setDescripcion] = useState(null);
+    const [newprecio, setPrecio] = useState(null);
 
     const [produc, setProduc] = useState([]);
     const producCollectionRef = collection(db, 'productos');
@@ -19,6 +25,9 @@ const Show = () => {
         const data = await getDocs(producCollectionRef);
         //console.log(data);
         setProduc(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+        Title2.current.value = "";
+        Descripcion2.current.value = "";
+        Price2.current.value = "";
     }
 
     const AddPost = (post) => {
@@ -27,6 +36,23 @@ const Show = () => {
         setPost(tempPost);
         setProduc();
     }
+
+    const AddProduct = async () => {
+        /*const post={
+            titulo: Title2.current.value,
+            descripcion: Descripcion2.current.value,
+            precio: Price2.current.value
+        }*/
+        //console.log(post)
+        await addDoc(producCollectionRef, {titulo: Title2.current.value,
+            descripcion: Descripcion2.current.value,
+            precio: Price2.current.value})
+        getProduc();
+        /*const tempPost = post1.slice();
+        tempPost.push(post);
+        setPost(tempPost);*/
+    }
+
 
     const EditPost = (id, titulo, descripcion, precio) => {
         const pos = {
@@ -60,8 +86,37 @@ const Show = () => {
     return (
         <div>
             <div id="envio">
-                <EnviarP AddPost={AddPost} />
+                <p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Add</a>
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <div class="collapse multi-collapse" id="multiCollapseExample1">
+                            <div class="envio3">
+                                <div>
+                                    <h1>Enviar un producto</h1>
+                                    <div id="pdeenvio">
+                                        <p>Apartado Admin</p>
+                                    </div>
+                                    <div>
+                                        <input ref={Title2} type="text" placeholder="Titulo"></input>
+                                        <p></p>
+                                        <input type="text" placeholder="Link Imagen"></input>
+                                        <p></p>
+                                        <input ref={Descripcion2} type="text" placeholder="Descripcion"></input>
+                                        <p></p>
+                                        <input ref={Price2} type="text" placeholder="Precio"></input>
+                                        <p></p>
+                                        <button className="btn boton-envio" onClick={AddProduct}>Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
             <div className="Productos">
                 <div id="test">
                     {produc.map((produc) => {

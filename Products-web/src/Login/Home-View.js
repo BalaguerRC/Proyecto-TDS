@@ -82,6 +82,9 @@ const Home_view = () => {
                     <Products_View />
                 </div>
             </div>
+            <footer className="bd-footer py-4 py-md-5 mt-5 bg-light">
+                <div className="container py-4 py-md-5 px-4 px-md-3">Prueba</div>
+            </footer>
         </div>
     );
     ;
