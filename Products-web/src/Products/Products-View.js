@@ -3,6 +3,7 @@ import { collection, getDocs, getDoc, deleteDoc, doc, updateDoc } from 'firebase
 import { db } from "../Login/ConfiguracionFirebase";
 import Post from "./post";
 import EnviarP from "./EnviarP";
+import "../Products/test/index.css";
 
 const Products_View = () => {
 
@@ -36,24 +37,24 @@ const Products_View = () => {
     return (
         <div>
             <div className="Contenedor ps-lg-2">
-                <div className="Productos">
-                        <div id="test">
-                            {
-                                produc.map((produc) => {
-                                    return (
-                                        <div className="producto_footer card5">
-                                            <div id="div2" className="card">
-                                                <div className="Titulo">{produc.titulo}</div>
-                                                <img src="https://cdn-icons-png.flaticon.com/512/25/25400.png" className="card-img-top" id="cardPro" width="160" height="160" />
-                                                <p className="card-text" >Descripcion: {produc.descripcion}</p>
-                                                <div>RD$ {produc.precio}</div>
-                                                <button className="btn button3" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => { MostrarProduct(produc.id, produc.titulo, produc.descripcion, produc.precio) }}>Comprar</button>
-                                            </div>
+                <div className="Productos container">
+                    <div className="row row-cols-1 row-cols-md-auto g-4" id="test10">
+                        {
+                            produc.map((produc) => {
+                                return (
+                                    <div className="producto_footer col card5">
+                                        <div id="div2" className="card">
+                                            <div className="Titulo">{produc.titulo}</div>
+                                            <img src="https://cdn-icons-png.flaticon.com/512/25/25400.png" className="card-img-top" id="cardPro" width="160" height="160" />
+                                            <p className="card-text" >Descripcion: {produc.descripcion}</p>
+                                            <div>RD$ {produc.precio}</div>
+                                            <button className="btn button3" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => { MostrarProduct(produc.id, produc.titulo, produc.descripcion, produc.precio) }}>Comprar</button>
                                         </div>
-                                    );
-                                })
-                            }
-                        </div>
+                                    </div>
+                                );
+                            })
+                        }
+                    </div>
                 </div>
             </div>
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -84,7 +85,9 @@ const Products_View = () => {
                     </div>
                 </div>
             </div>
-
+            <div>
+                
+            </div>
         </div>
     );
 }

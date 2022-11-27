@@ -3,6 +3,7 @@ import { collection, getDocs, getDoc, deleteDoc, doc, updateDoc, addDoc } from '
 import { db } from "../../Login/ConfiguracionFirebase";
 import { async } from "@firebase/util";
 import EnviarP from "../EnviarP";
+import "./index.css";
 
 const Show = () => {
     const Descripcion = useRef(null);
@@ -44,9 +45,11 @@ const Show = () => {
             precio: Price2.current.value
         }*/
         //console.log(post)
-        await addDoc(producCollectionRef, {titulo: Title2.current.value,
+        await addDoc(producCollectionRef, {
+            titulo: Title2.current.value,
             descripcion: Descripcion2.current.value,
-            precio: Price2.current.value})
+            precio: Price2.current.value
+        })
         getProduc();
         /*const tempPost = post1.slice();
         tempPost.push(post);
@@ -116,7 +119,6 @@ const Show = () => {
                 </div>
             </div>
 
-
             <div className="Productos">
                 <div id="test">
                     {produc.map((produc) => {
@@ -128,8 +130,11 @@ const Show = () => {
                                     <div className="Titulo">Titulo: {produc.titulo}</div>
                                     <p className="card-text" >Descripcion: {produc.descripcion}</p>
                                     <div>RD$ {produc.precio}</div>
-                                    <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => { EditPost(produc.id, produc.titulo, produc.descripcion, produc.precio) }}>Editar</button>
-                                    <button type="button" className="btn btn-danger btnDelete" onClick={() => { deletePost(produc.id) }}>Borrar</button>
+                                    <div className="buttongroup">
+                                        <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => { EditPost(produc.id, produc.titulo, produc.descripcion, produc.precio) }}>Editar</button>
+                                        <button type="button" className="btn btn-danger btnDelete" onClick={() => { deletePost(produc.id) }}>Borrar</button>
+                                    </div>
+
                                 </div>
                             </div>
 

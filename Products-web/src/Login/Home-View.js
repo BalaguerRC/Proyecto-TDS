@@ -54,7 +54,7 @@ const Home_view = () => {
                 </div>
 
             </nav>
-            <div className="VistaProducto">
+            <div className="VistaProducto ps-lg-2">
                 <div className="carouselMe">
                     <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
