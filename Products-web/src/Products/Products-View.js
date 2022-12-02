@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { collection, getDocs, getDoc, deleteDoc, doc, updateDoc } from 'firebase/firestore';
 import { db } from "../Login/ConfiguracionFirebase";
-import Post from "./post";
-import EnviarP from "./EnviarP";
-import "../Products/test/index.css";
+import "./productAdmin/index.css";
 
 const Products_View = () => {
 
@@ -17,10 +15,11 @@ const Products_View = () => {
         //console.log(data);
         setProduc(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     }
-    const MostrarProduct = (id, titulo, descripcion, precio) => {
+    const MostrarProduct = (id, titulo, imagen, descripcion, precio) => {
         const pos = {
             id: id,
             titulo: titulo,
+            imagen: imagen,
             descripcion: descripcion,
             precio: precio
         }
@@ -34,21 +33,30 @@ const Products_View = () => {
     }, []);
 
     //div3
+    //div className="Contenedor ps-lg-2"
+    //div className="Productos container"
     return (
         <div>
-            <div className="Contenedor ps-lg-2">
-                <div className="Productos container">
-                    <div className="row row-cols-1 row-cols-md-auto g-4" id="test10">
+            <div>
+                <div>
+                    <div className="row row-cols-1 row-cols-md-4 g-5" id="test10">
                         {
                             produc.map((produc) => {
                                 return (
-                                    <div className="producto_footer col card5">
-                                        <div id="div2" className="card">
+                                    <div className="col">
+                                        <div id="div25" className="card h-100">
+
+                                            <div className="divimagen10">
+                                                <img src={produc.imagen} className="card-img-top " id="cardPro" width="auto" height="auto" />
+                                            </div>
                                             <div className="Titulo">{produc.titulo}</div>
-                                            <img src="https://cdn-icons-png.flaticon.com/512/25/25400.png" className="card-img-top" id="cardPro" width="160" height="160" />
-                                            <p className="card-text" >Descripcion: {produc.descripcion}</p>
-                                            <div>RD$ {produc.precio}</div>
-                                            <button className="btn button3" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => { MostrarProduct(produc.id, produc.titulo, produc.descripcion, produc.precio) }}>Comprar</button>
+                                            <div className="card-body">
+
+                                                <p className="card-text" >Descripcion: {produc.descripcion}</p>
+                                                <div>RD$ {produc.precio}</div>
+                                            </div>
+
+                                            <button className="btn button3" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => { MostrarProduct(produc.id, produc.titulo, produc.imagen, produc.descripcion, produc.precio) }}>Comprar</button>
                                         </div>
                                     </div>
                                 );
@@ -65,12 +73,17 @@ const Products_View = () => {
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            Titulo: {mostrar.titulo}
-                            <br />
-                            Descripcion: {mostrar.descripcion}
-                            <br />
-                            Precio: {mostrar.precio}
-                            <br />
+                            <div className="text-break">
+                                Titulo: {mostrar.titulo}
+                                <br />
+                                Link Imagen: {mostrar.imagen}
+                                <br />
+                                Descripcion: {mostrar.descripcion}
+                                <br />
+                                Precio: {mostrar.precio}
+                                <br />
+                            </div>
+
                             <form>
                                 <div className="mb-3">
                                     <label for="recipient-name" className="col-form-label">Link de la Base de Datos:</label>
@@ -86,7 +99,7 @@ const Products_View = () => {
                 </div>
             </div>
             <div>
-                
+
             </div>
         </div>
     );

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import fire from "./ConfiguracionFirebase";
 import "firebase/auth";
-import Products from "../Products/Products";
-import Show from "../Products/test/show";
+import Show from "../Products/productAdmin/Products-Admin";
 import Products_View from "../Products/Products-View";
 //import Login from "./Login";
 //import Muro from "./Muro";
@@ -55,7 +54,7 @@ const Home = () => {
                 </div>
 
             </nav>
-            <div>
+            <div className="Productos SegundaVista rounded">
                 <Show />
             </div>
         </div>

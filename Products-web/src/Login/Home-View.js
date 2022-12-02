@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import fire from "./ConfiguracionFirebase";
 import "firebase/auth";
-import Products from "../Products/Products";
 import Products_View from "../Products/Products-View";
 //import Login from "./Login";
 //import Muro from "./Muro";
@@ -78,7 +77,7 @@ const Home_view = () => {
                         </button>
                     </div>
                 </div>
-                <div>
+                <div className="SegundaVista rounded">
                     <Products_View />
                 </div>
             </div>
