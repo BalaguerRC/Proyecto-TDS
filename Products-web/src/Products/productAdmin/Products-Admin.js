@@ -78,6 +78,7 @@ const Show = () => {
 
     const deletePost = async (id) => {
         await removeProduct(id);
+      window.location.reload();
         getProduc();
     }
 
@@ -137,7 +138,7 @@ const Show = () => {
 
                                         <div className="btn-group" role="group" aria-label="Basic outlined example">
                                             <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => { EditPost(produc.id, produc.titulo, produc.imagen, produc.descripcion, produc.precio) }}>Editar</button>
-                                            <button type="button" className="btn btn-danger btnDelete" onClick={() => { deletePost(produc.id) }}>Borrar</button>
+                                            <button type="button" data-bs-toggle="modal"  className="btn btn-danger btnDelete" data-bs-target="#Deleteconfirm" onClick={() => { EditPost(produc.id, produc.titulo, produc.imagen, produc.descripcion, produc.precio) }}>Borrar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -194,6 +195,26 @@ const Show = () => {
                         </div>
                     </div>
                 </div>
+
+                <div class="modal fade" id="Deleteconfirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmacion de borrado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Esta seguro de eliminar este producto ID: {mostrar.id}?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onClick={() => { deletePost(mostrar.id) }}>Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
             </div>
         </div>
     )
