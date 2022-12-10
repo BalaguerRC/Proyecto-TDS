@@ -1,18 +1,20 @@
 ///import logo from './logo.svg';
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 //import './App.css';
 import fire from "./Login/ConfiguracionFirebase";
 import Login from "./Login/Login";
 import Home from "./Login/Home";
 import Home_view from "./Login/Home-View";
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Paginas } from "./Components/Paginas";
 
 
 function App() {
 
-  const [usuario,setUsuario] = useState(null);
-  const [abrire,setAbrire]= useState(null);
-  useEffect(()=>{
-    fire.auth().onAuthStateChanged((usuarioFirebase)=>{
+  const [usuario, setUsuario] = useState(null);
+  const [abrire, setAbrire] = useState(null);
+  useEffect(() => {
+    fire.auth().onAuthStateChanged((usuarioFirebase) => {
       console.log("ya tienes sesion iniciada con:", usuarioFirebase);
       setUsuario(usuarioFirebase);
       setAbrire(usuarioFirebase.email);
@@ -23,24 +25,27 @@ function App() {
         console.log("no es admin");
       }*/
     })
-  },[]);
+  }, []);
 
-  const abrir=()=>{
-    if(abrire=="admin@gmail.com"){
+  const abrir = () => {
+    if (abrire == "admin@gmail.com") {
       //console.log("Administrador: ", abrire);
-      return (<Home/>);
-    } 
-    else{
+      return (<Home />);
+    }
+    else {
       //console.log("Visitante: ", abrire);
-      return (<Home_view/>)
+      return (<Home_view />)
     }
   }
-  
+
   return (
     <div>
-     <>
-     {usuario ? abrir(): <Login setUsuario={setUsuario}/>}
-     </>
+      <>
+        {usuario ? abrir() : <Login setUsuario={setUsuario} />}
+      </>
+      <div>
+
+      </div>
     </div>
   );
 }

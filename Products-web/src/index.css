@@ -1,10 +1,11 @@
 body {
-  background-color: rgba(13, 42, 52, 0.97);
+  background-color: rgba(55, 55, 55, 0.97);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
 }
 
 code {
@@ -211,17 +212,13 @@ button {
 }
 /*courusel*/
 .carouselMe{
-  height: 500px;
-  width: 700px;
-  align-items: center;
-  justify-content: center;
-  margin-left: 7%;
   margin-top: 3%;
+
   
 }
 .carouselMe img{
   border-radius: 20px;
-  display: grid;
+
 }
 
 .VistaProducto{
@@ -229,6 +226,7 @@ button {
   margin-block-end: 0%;
 }
 .SegundaVista{
+  margin-top: 10px;
   margin-left: 7%;
   margin-right: 7%;
   border-radius: 20px;
@@ -262,7 +260,7 @@ button {
   border-radius: 5px;
 }
 .producto:hover{
-  border: 6px solid #1f496b;
+  border: 6px solid #446884;
 }
 .producto_footer{
   border-radius: 20px;
@@ -318,9 +316,9 @@ button {
 }
 
 #div25{
-  background-color: #202020;
-  border-radius: 20px;
+  background-color: RGBA(33,37,41,var(--bs-bg-opacity,1));
   color: white;
+  
 
 }
 #div25:hover{

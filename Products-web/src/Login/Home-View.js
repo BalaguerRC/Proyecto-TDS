@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import fire from "./ConfiguracionFirebase";
 import "firebase/auth";
 import Products_View from "../Products/Products-View";
+import VistaCliente from "../Products/VistaCliente";
 //import Login from "./Login";
 //import Muro from "./Muro";
 
@@ -20,6 +21,8 @@ const Home_view = () => {
             setUserF(userfirebase.email);
         })
     }, []);
+
+    //<Products_View />
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="muestraVisitante">
@@ -34,7 +37,7 @@ const Home_view = () => {
                                 <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Store</a>
+                                <a class="nav-link" href="#TodoProducto2">Store</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
@@ -53,35 +56,22 @@ const Home_view = () => {
                 </div>
 
             </nav>
-            <div className="VistaProducto ps-lg-2">
-                <div className="carouselMe">
-                    <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="https://st.depositphotos.com/1502235/1685/i/600/depositphotos_16852709-stock-photo-parcels-ready-for-dispatch.jpg" class="d-block w-100" alt="..." />
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://st2.depositphotos.com/2288675/5791/i/450/depositphotos_57916281-stock-photo-gift-packages-wrapped-in-brown.jpg" class="d-block w-100" alt="..." />
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://www.hamex.hu/wp-content/uploads/2018/09/csomag.jpg" class="d-block w-100" alt="..." />
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+            <div className="SegundaVista">
+                <div class="p-5 mb-4 text-bg-dark rounded-3">
+                    <div class="container-fluid py-5">
+                        <h1 class="display-5 fw-bold">Tienda Productos</h1>
+                        <p class="col-md-8 fs-4">Aqui puedes comprar los productos que necesites para tu gestor de productos, recuerda que necesitas un link para enviar los datos a la base de datos del gestor.</p>
+                        <a class="btn btn-primary btn-lg" type="button" href="#TodoProducto2">Productos</a>
                     </div>
                 </div>
-                <div className="SegundaVista rounded">
-                    <Products_View />
-                </div>
             </div>
-            <footer className="bd-footer py-4 py-md-5 mt-5 bg-light">
+
+            <div className="SegundaVista rounded" id="TodoProducto2">
+                <hr class="featurette-divider"></hr>
+                <Products_View />
+            </div>
+            
+            <footer className="bd-footer py-4 py-md-5 mt-5 text-bg-dark">
                 <div className="container py-4 py-md-5 px-4 px-md-3">Prueba</div>
             </footer>
         </div>
