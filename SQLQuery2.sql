@@ -6,24 +6,21 @@ use proyect_tds
 
 
 
-create table tipo_user
+create table producto
 (
-id_type int primary key,
-tipo_usuario varchar (50)
+id_prod int primary key,
+prod_type varchar (50),
+prod_name varchar(150),
+prod_price varchar(150),
 );
 
-create table log_in
-(
-id_user int primary key,
-nombre varchar(50),
-pass varchar (50),
-id_Tipo int not null
-);
 
-insert tipo_user values (2, 'Empleado')
 
-insert log_in values (1,'Cristopher', '123456', 1)
+
 
 select * from log_in
+
+
+
 
 

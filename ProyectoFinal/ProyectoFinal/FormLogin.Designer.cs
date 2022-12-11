@@ -1,4 +1,5 @@
-﻿namespace ProyectoFinal
+﻿using System.Configuration;
+namespace ProyectoFinal
 {
     partial class FormLogin
     {
@@ -19,7 +20,7 @@
             }
             base.Dispose(disposing);
         }
-
+        string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         #region Windows Form Designer generated code
 
         /// <summary>
