@@ -15,13 +15,15 @@ using System.Data.SqlClient;
 
 namespace ProyectoFinal
 {
+    
+        
+    
 
-   
     public partial class FormLogin : Form
     {
 
-        SqlConnection cnn = new SqlConnection(@"Data Source=(localdb/proyect_tds;Initial Catalog=tarea;Integrated Security=True;Connect Timeout=25;)");
 
+        SqlConnection cnn = new SqlConnection(ConfigurationManager.ConnectionStrings["cnn"].ConnectionString);
 
 
         public FormLogin()
