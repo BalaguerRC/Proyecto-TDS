@@ -8,11 +8,19 @@ use proyect_tds
 
 create table producto
 (
-id_prod int primary key,
-prod_type varchar (50),
+id_prod int not null primary key identity(1,1),
 prod_name varchar(150),
-prod_price varchar(150),
+prod_price varchar(50),
+prod_date datetime default getdate(),
+/*prod_type int FOREIGN KEY (*/
 );
+
+create table prod_type
+(
+id_typProd int not null primary key identity (1,1),
+type_names varchar (50),
+
+)
 
 
 

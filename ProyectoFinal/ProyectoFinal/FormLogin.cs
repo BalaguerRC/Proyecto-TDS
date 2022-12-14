@@ -10,14 +10,28 @@ using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
 
+
+
+
 namespace ProyectoFinal
 {
+
+   
     public partial class FormLogin : Form
     {
+
+        SqlConnection cnn = new SqlConnection(@"Data Source=(localdb/proyect_tds;Initial Catalog=tarea;Integrated Security=True;Connect Timeout=25;)");
+
+
+
         public FormLogin()
         {
             InitializeComponent();
         }
+
+        
+
+
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
@@ -31,8 +45,7 @@ namespace ProyectoFinal
         }
         public void Logear()
         {
-            Program.boolAuthentication = true;
-            this.Close();
+            cnn.Open();
         }
     }
 }

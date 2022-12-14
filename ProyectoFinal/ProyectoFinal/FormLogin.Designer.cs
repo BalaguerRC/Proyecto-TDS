@@ -1,4 +1,5 @@
 ﻿using System.Configuration;
+
 namespace ProyectoFinal
 {
     partial class FormLogin
