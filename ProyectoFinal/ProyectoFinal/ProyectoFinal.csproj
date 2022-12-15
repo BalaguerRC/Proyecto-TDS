@@ -53,11 +53,24 @@
     <Compile Include="AdminMenu.Designer.cs">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customs\ComboboxItem.cs" />
     <Compile Include="FormCorreo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCorreo.Designer.cs">
       <DependentUpon>FormCorreo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInicio.Designer.cs">
+      <DependentUpon>FormInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInventarioAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInventarioAdmin.Designer.cs">
+      <DependentUpon>FormInventarioAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -77,7 +90,12 @@
     <Compile Include="FormSplash.Designer.cs">
       <DependentUpon>FormSplash.cs</DependentUpon>
     </Compile>
-    <Compile Include="Funciones.cs" />
+    <Compile Include="FormUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsers.Designer.cs">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminMenu.resx">
@@ -85,6 +103,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCorreo.resx">
       <DependentUpon>FormCorreo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInicio.resx">
+      <DependentUpon>FormInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInventarioAdmin.resx">
+      <DependentUpon>FormInventarioAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -94,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSplash.resx">
       <DependentUpon>FormSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsers.resx">
+      <DependentUpon>FormUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -123,6 +150,16 @@
     <None Include="Image\Casa.png" />
     <None Include="Image\Proyecto nuevo2.png" />
     <None Include="Image\Proyecto nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BussinesLayer\BussinesLayer.csproj">
+      <Project>{f59f5866-703b-4ca3-8020-2d93cbfb8764}</Project>
+      <Name>BussinesLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataBase\DataBase.csproj">
+      <Project>{d18f33fb-6087-440e-938b-999b9105b11f}</Project>
+      <Name>DataBase</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

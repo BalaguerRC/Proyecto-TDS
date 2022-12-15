@@ -17,11 +17,17 @@ namespace ProyectoFinal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            /*do
+            {
+                Application.Run(new FormSplash());
+                Application.Run(new FormLogin());
+            } while (boolAuthentication);*/
             Application.Run(new FormSplash());
             Application.Run(new FormLogin());
             if (boolAuthentication)
             {
                 Application.Run(new FormMenuPrincipal());
+                
             }
         }
     }

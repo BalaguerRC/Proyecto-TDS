@@ -25,3 +25,26 @@ C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Nueva Solucion\Nueva carpeta\P
 C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Nueva Solucion\Nueva carpeta\Proyecto-TDS\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
 C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Nueva Solucion\Nueva carpeta\Proyecto-TDS\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
 C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Nueva Solucion\Nueva carpeta\Proyecto-TDS\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.FormCorreo.resources
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.AssemblyReference.cache
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.SuggestedBindingRedirects.cache
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.AdminMenu.resources
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.FormCorreo.resources
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.FormLogin.resources
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.FormMenuPrincipal.resources
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.FormSplash.resources
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Properties.Resources.resources
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.GenerateResource.cache
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe.config
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.pdb
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.FormInventarioAdmin.resources
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.FormUsers.resources
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.FormInicio.resources
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\bin\Debug\BussinesLayer.dll
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\bin\Debug\DataBase.dll
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\bin\Debug\BussinesLayer.pdb
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\bin\Debug\DataBase.pdb
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CopyComplete
