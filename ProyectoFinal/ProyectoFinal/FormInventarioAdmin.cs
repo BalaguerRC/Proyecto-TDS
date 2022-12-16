@@ -1,4 +1,5 @@
 ﻿using BussinesLayer;
+using ClosedXML.Excel;
 using DataBase.Models;
 using ProyectoFinal.Customs;
 using System;
@@ -37,6 +38,8 @@ namespace ProyectoFinal
 
         private void FormInventarioAdmin_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'proyect_tdsDataSet.producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter.Fill(this.proyect_tdsDataSet.producto);
             LoadCombobox();
             LoadProduct();
         }
@@ -226,5 +229,38 @@ namespace ProyectoFinal
             cbCategory.SelectedIndex = 0;
         }
         #endregion
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvInventario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            using(SaveFileDialog sfd = new SaveFileDialog(){ Filter = "Excel Workbook|*.xlsx" })
+            {
+                if(sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (XLWorkbook workbook = new XLWorkbook())
+                        {
+                            workbook.Worksheets.Add(this.proyect_tdsDataSet.producto.CopyToDataTable(), "producto");
+                            workbook.SaveAs(sfd.FileName);
+                        }
+                        MessageBox.Show("ha guardado correctamente su documento tipo Excel.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
     }
 }
