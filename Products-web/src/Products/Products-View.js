@@ -53,15 +53,15 @@ const Products_View = () => {
         //console.log(pos);
     }
 
-    const Compra = (titulo, descripcion, precio) => {
+    const Compra = (titulo, precio) => {
         if (Link.current.value == "") {
             //return
         }
         else {
             const envio = {
-                Titulo: titulo,
-                Descripcion: descripcion,
-                Precio: precio
+                Name: titulo,
+                Price: precio,
+                Type: 1
             };
             console.log(envio);
             try {
@@ -130,11 +130,9 @@ const Products_View = () => {
                         </div>
                         <div class="modal-body">
                             <div className="text-break">
+                                Datos que se van a enviar:
+                                <br/>
                                 Titulo: {mostrar.titulo}
-                                <br />
-                                Link Imagen: {mostrar.imagen}
-                                <br />
-                                Descripcion: {mostrar.descripcion}
                                 <br />
                                 Precio: {mostrar.precio}
                                 <br />
@@ -149,7 +147,7 @@ const Products_View = () => {
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onClick={() => { Compra(mostrar.titulo, mostrar.descripcion, mostrar.precio) }}>Comprar</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onClick={() => { Compra(mostrar.titulo, mostrar.precio) }}>Comprar</button>
                         </div>
                     </div>
                 </div>
