@@ -1,0 +1,18 @@
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\BussinesLayer\bin\Debug\BussinesLayer.dll
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\BussinesLayer\bin\Debug\BussinesLayer.pdb
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\BussinesLayer\obj\Debug\BussinesLayer.csproj.AssemblyReference.cache
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\BussinesLayer\obj\Debug\BussinesLayer.csproj.CoreCompileInputs.cache
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\BussinesLayer\obj\Debug\BussinesLayer.dll
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\BussinesLayer\obj\Debug\BussinesLayer.pdb
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\BussinesLayer\bin\Debug\DataBase.dll
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\BussinesLayer\bin\Debug\DataBase.pdb
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\BussinesLayer\obj\Debug\BussinesLayer.csproj.CopyComplete
+C:\Users\PC-RICARDO\Documents\GitHub\Proyecto-TDS\ProyectoFinal\BussinesLayer\bin\Debug\BussinesLayer.dll
+C:\Users\PC-RICARDO\Documents\GitHub\Proyecto-TDS\ProyectoFinal\BussinesLayer\bin\Debug\BussinesLayer.pdb
+C:\Users\PC-RICARDO\Documents\GitHub\Proyecto-TDS\ProyectoFinal\BussinesLayer\bin\Debug\DataBase.dll
+C:\Users\PC-RICARDO\Documents\GitHub\Proyecto-TDS\ProyectoFinal\BussinesLayer\bin\Debug\DataBase.pdb
+C:\Users\PC-RICARDO\Documents\GitHub\Proyecto-TDS\ProyectoFinal\BussinesLayer\obj\Debug\BussinesLayer.csproj.AssemblyReference.cache
+C:\Users\PC-RICARDO\Documents\GitHub\Proyecto-TDS\ProyectoFinal\BussinesLayer\obj\Debug\BussinesLayer.csproj.CoreCompileInputs.cache
+C:\Users\PC-RICARDO\Documents\GitHub\Proyecto-TDS\ProyectoFinal\BussinesLayer\obj\Debug\BussinesLayer.csproj.CopyComplete
+C:\Users\PC-RICARDO\Documents\GitHub\Proyecto-TDS\ProyectoFinal\BussinesLayer\obj\Debug\BussinesLayer.dll
+C:\Users\PC-RICARDO\Documents\GitHub\Proyecto-TDS\ProyectoFinal\BussinesLayer\obj\Debug\BussinesLayer.pdb

@@ -75,7 +75,7 @@ namespace DataBase
         }
         public DataTable GetAll()
         {
-            SqlDataAdapter query = new SqlDataAdapter("Select id_prod,prod_name,prod_price,prod_date,prod_type from product", _connection);
+            SqlDataAdapter query = new SqlDataAdapter("Select pr.id_prod as Id,pr.prod_name as Name,pr.prod_price as Price,prt.type_names as ProductType,pr.prod_date as Date from product pr join prod_type prt on pr.prod_type=prt.id_typProd", _connection);
             return LoadData(query);
         }
 

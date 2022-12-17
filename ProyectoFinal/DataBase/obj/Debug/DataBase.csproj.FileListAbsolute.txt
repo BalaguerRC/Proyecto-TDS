@@ -4,3 +4,9 @@ C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final
 C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\DataBase\obj\Debug\DataBase.csproj.CoreCompileInputs.cache
 C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\DataBase\obj\Debug\DataBase.dll
 C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\Proyecto para entregable final\Proyecto-TDS-master\ProyectoFinal\DataBase\obj\Debug\DataBase.pdb
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\otra solucion\Proyecto-TDS\ProyectoFinal\DataBase\bin\Debug\DataBase.dll
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\otra solucion\Proyecto-TDS\ProyectoFinal\DataBase\bin\Debug\DataBase.pdb
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\otra solucion\Proyecto-TDS\ProyectoFinal\DataBase\obj\Debug\DataBase.csproj.AssemblyReference.cache
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\otra solucion\Proyecto-TDS\ProyectoFinal\DataBase\obj\Debug\DataBase.csproj.CoreCompileInputs.cache
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\otra solucion\Proyecto-TDS\ProyectoFinal\DataBase\obj\Debug\DataBase.dll
+C:\Tareas Itla Ultimo Cuatrimestre\Proyecto Final\otra solucion\Proyecto-TDS\ProyectoFinal\DataBase\obj\Debug\DataBase.pdb

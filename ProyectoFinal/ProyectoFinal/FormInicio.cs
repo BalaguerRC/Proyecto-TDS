@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataBase.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace ProyectoFinal
         public FormInicio()
         {
             InitializeComponent();
+            lblUser.Text = Cache.Name;
         }
         private void FechaHora()
         {

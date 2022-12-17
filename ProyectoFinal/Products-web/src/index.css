@@ -1,0 +1,337 @@
+body {
+  background-color: rgba(55, 55, 55, 0.97);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#container{
+  height: auto;
+  align-items: center;
+  color: aliceblue;
+  text-align: center;
+  height: auto;
+  background-color: #202020;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 15px 10px 0px 5px #00000033;
+  margin: 30px;
+  max-width: 520px;
+  min-height: 600px;
+}
+#login{
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 20px;
+  display: flex;
+  color: white;
+}
+#logincontainer{
+  padding: 40px;
+  margin: auto;
+  width: 100%;
+  max-width: 520px;
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  background: rgb(19, 30, 54);
+}
+
+
+#label {
+  color: white;
+  margin: 14px 0;
+  display: block;
+  font-size: 22px;
+  line-height: 1;
+}
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 19px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  letter-spacing: 1px;
+}
+button {
+  border: none;
+  outline: none;
+  display: grid;
+  justify-content: center;
+  width: 40%;
+  float: right;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: #1f496b;
+  cursor: pointer;
+}
+
+.button2{
+  border: none;
+  outline: none;
+  width: 50%;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: #3bbb50;
+  cursor: pointer;
+}
+
+#pdeenvio{
+  display: flex;
+}
+#p1{
+  color: rgb(81, 213, 247);
+}
+#error{
+  color: red;
+}
+
+.button3 {
+  border: none;
+  outline: none;
+  display: grid;
+  float: right;
+  width: auto;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: #603bbb;
+  cursor: pointer;
+  margin-top: 3px;
+}
+.buttonLogout {
+  border: none;
+  outline: none;
+  float: right;
+  width: auto;
+  padding: 2px 20px;
+  color: #fff;
+  font-size: 15px;
+  background: #603bbb;
+  cursor: pointer;
+  margin-top: 3px;
+}
+#btnContainer {
+  width: 100%;
+  padding: 24px 0;
+}
+#muestra{
+  color: white;
+  background: rgb(19, 30, 54);
+  width: 100%;
+  padding: 2px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#muestraVisitante{
+  color: white;
+  background: rgb(19, 30, 54);
+  width: 100%;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+#muestra h2{
+  color: white;
+}
+
+
+#div3{
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 20px;
+}
+#envio{
+  color: white;
+  background-color: #242535;
+  padding: 10px;
+  border-radius: 20px;
+  display: grid;
+  margin-block-end: 20px;
+  width: auto;
+}
+.botonCentro{
+  justify-content: center;
+  align-items: center;
+  display: grid;
+}
+
+.contenidoModal{
+  color: white;
+  background-color: #242535;
+}
+
+#envio2{
+
+  padding: 20px;
+  display: grid;
+  float: left;
+  width: auto;
+}
+.boton-envio{
+  float: right;
+  border: none;
+  outline: none;
+  display: grid;
+  align-items: center;
+  width:30%;
+  padding: 10px 9px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: #134167;
+  cursor: pointer;
+}
+.Titulo{
+  background-color: #1f496b;
+  padding: 5px;
+  border-radius: 5px;
+}
+.ParrafoCentro{
+  text-align: center;
+}
+/*courusel*/
+.carouselMe{
+  margin-top: 3%;
+
+  
+}
+.carouselMe img{
+  border-radius: 20px;
+
+}
+
+.VistaProducto{
+  padding: 5px 5px;
+  margin-block-end: 0%;
+}
+.SegundaVista{
+  margin-top: 10px;
+  margin-left: 7%;
+  margin-right: 7%;
+  border-radius: 20px;
+}
+
+.ID{
+  color: red;
+  font-size: 80%;
+}
+/*Botones*/
+.btnDelete{
+  margin-left: 3px;
+}
+
+
+
+
+/*-------test------*/
+
+.Productos{
+  margin-top: 20px;
+  margin-block-end: 2%;
+}
+
+.producto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 10px 10px 2px rgba(0, 0, 0, .2);
+  border: 6px solid transparent;
+  border-radius: 5px;
+}
+.producto:hover{
+  border: 6px solid #446884;
+}
+.producto_footer{
+  border-radius: 20px;
+}
+.producto_footer h1{
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #3bbb50;
+  font-family: Helvetica, sans-serif;
+}
+
+.producto .buttom{
+  width: 100%;
+  height: 45px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap:1rem 2rem;
+}
+#test2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #242535;
+  padding: 15px;
+  border-radius: 20px;
+  float: right;
+  box-shadow: 15px 10px 0px 5px #00000033;
+  margin: 30px;
+  width: 300px;
+  color: #fff;
+  
+}
+.Contenedor5{
+  display: grid;
+  margin-right: 11%;
+  margin-left: 6%;
+  background-color: #121111;
+  border-radius: 25px;
+}
+#test{
+  display: flex;
+  flex-flow: row wrap;
+
+}
+#div2{
+  display: grid;
+  align-items: center;
+  width: 18rem;
+  background-color: #202020;
+  border-radius: 20px;
+  margin: 25px;
+  color: white;
+}
+
+#div25{
+  background-color: RGBA(33,37,41,var(--bs-bg-opacity,1));
+  color: white;
+  
+
+}
+#div25:hover{
+  border: 10px solid #1f496b;
+}
+.divimagen{
+  display:grid;
+  justify-content: center;
+}
+#div2:hover{
+  border: 6px solid #1f496b;
+}
+
+#cardPro{
+  border-radius: 5px;
+}

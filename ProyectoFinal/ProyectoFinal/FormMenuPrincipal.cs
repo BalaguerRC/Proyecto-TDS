@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataBase.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -12,12 +13,15 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal
 {
-    public partial class FormMenuPrincipal : Form
+    public partial class FormMenuPrincipalEmpleado : Form
     {
         SqlConnection cnn = new SqlConnection(ConfigurationManager.ConnectionStrings["cnn"].ConnectionString);
-        public FormMenuPrincipal()
+        public FormMenuPrincipalEmpleado()
         {
             InitializeComponent();
+            //Program.boolAuthentication = false;
+            //MessageBox.Show($"Usuario {Cache.Name}", "Aviso");
+            //Validation(Cache.Name);
         }
         private void FormMenuPrincipal_Load(object sender, EventArgs e)
         {
@@ -66,8 +70,6 @@ namespace ProyectoFinal
         private void AlLogin()
         {
             this.Close();
-            FormLogin login = new FormLogin();
-            login.Show();
         }        
         private void OpenForm(object formHijo)
         {
@@ -81,5 +83,10 @@ namespace ProyectoFinal
             form.Show();
         }
         #endregion
+
+        private void btnCategoria_Click(object sender, EventArgs e)
+        {
+            OpenForm(new FormCategoria());
+        }
     }
 }

@@ -24,6 +24,7 @@ namespace ProyectoFinal
         public FormUsers()
         {
             InitializeComponent();
+            tabPage2.Parent = null;
             string connectionString = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
             SqlConnection _connection = new SqlConnection(connectionString);
             service = new LoginService(_connection);
@@ -50,6 +51,33 @@ namespace ProyectoFinal
             }
         }
 
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
+            if (id == null)
+            {
+                try
+                {
+                    Add();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ocurrio un error", "Aviso");
+                }
+
+            }
+            else
+            {
+                try
+                {
+                    Edit();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ocurrio un error", "Aviso");
+                }
+
+            }
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -123,10 +151,16 @@ namespace ProyectoFinal
             {
                 login.UserName = txtUser.Text;
                 login.PasswordH=txtConfirmPass.Text;
-                login.IdTipo = 1;
+                login.IdTipo = Convert.ToInt32(select.Value);
 
                 service.Add(login);
                 MessageBox.Show("Se Guardo", "Aviso");
+                if (tabPage1.Parent == null)
+                {
+                    tabInventario.TabPages.Insert(0, tabPage1);
+                }
+                tabPage2.Parent = null;
+                tabInventario.SelectedTab = tabPage1;
                 LoadUser();
                 ClearData();
             }
@@ -172,12 +206,17 @@ namespace ProyectoFinal
             else
             {
                 l.UserName = txtUser.Text;
-                l.PasswordH = txtConfirmPass.Text;
+                l.PasswordH = txtPassword.Text;
                 l.IdTipo = Convert.ToInt32(select.Value);
                 l.IdLogin = id.Value;
 
                 service.Edit(l);
                 MessageBox.Show("Se Edito", "Aviso");
+                if (tabPage1.Parent == null)
+                {
+                    tabInventario.TabPages.Insert(0, tabPage1);
+                }
+                tabPage2.Parent = null;
                 LoadUser();
                 Deselect();
                 ClearData();
@@ -191,6 +230,15 @@ namespace ProyectoFinal
             }
             else
             {
+                if (tabPage2.Parent == null)
+                {
+                    tabInventario.TabPages.Insert(0, tabPage2);
+
+                }
+                tabPage2.Text = "Editar";
+                tabPage1.Parent = null;
+                tabInventario.SelectedTab = tabPage2;
+
                 Login login = new Login();
                 login = service.GetId(id.Value);
 
@@ -241,5 +289,30 @@ namespace ProyectoFinal
             id = null;
         }
         #endregion
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (tabPage2.Parent == null)
+            {
+                tabInventario.TabPages.Insert(0, tabPage2);
+
+            }
+            id = null;
+            tabPage2.Text = "Agregar";
+            tabPage1.Parent = null;
+            tabInventario.SelectedTab = tabPage2;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (tabPage1.Parent == null)
+            {
+                tabInventario.TabPages.Insert(0, tabPage1);
+            }
+            tabPage2.Parent = null;
+            tabInventario.SelectedTab = tabPage1;
+            ClearData();
+        }
+
     }
 }

@@ -79,7 +79,7 @@ namespace DataBase
 
         public DataTable GetAll()
         {
-            SqlDataAdapter query = new SqlDataAdapter("Select id_user,nombre,pass,id_Tipo,Fecha from log_in", _connection);
+            SqlDataAdapter query = new SqlDataAdapter("Select lg.id_user as ID,lg.nombre as UserName,lg.pass Password,u.tipo_usuario as Type,lg.Fecha as Date from log_in lg join tipo_user u on lg.id_Tipo=u.id_type", _connection);
             return LoadData(query);
         }
 

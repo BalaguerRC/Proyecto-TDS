@@ -1,5 +1,4 @@
 ﻿using BussinesLayer;
-using ClosedXML.Excel;
 using DataBase.Models;
 using ProyectoFinal.Customs;
 using System;
@@ -24,6 +23,7 @@ namespace ProyectoFinal
         public FormInventarioAdmin()
         {
             InitializeComponent();
+            tabPage2.Parent = null;
             string connectionString = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
             SqlConnection connection = new SqlConnection(connectionString);
             productService= new ProductService(connection);
@@ -36,10 +36,9 @@ namespace ProyectoFinal
             dgvInventario.ClearSelection();
         }
 
+
         private void FormInventarioAdmin_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'proyect_tdsDataSet.producto' Puede moverla o quitarla según sea necesario.
-            this.productoTableAdapter.Fill(this.proyect_tdsDataSet.producto);
             LoadCombobox();
             LoadProduct();
         }
@@ -96,6 +95,37 @@ namespace ProyectoFinal
             Edicion();
         }
 
+
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            
+            if (tabPage2.Parent == null)
+            {
+                tabInventario.TabPages.Insert(0, tabPage2);
+                
+            }
+            id = null;
+            tabPage2.Text = "Agregar";
+            tabPage1.Parent = null;
+            tabInventario.SelectedTab = tabPage2;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (tabPage1.Parent == null)
+            {
+                tabInventario.TabPages.Insert(0, tabPage1);
+            }
+            tabPage2.Parent = null;
+            tabInventario.SelectedTab = tabPage1;
+            ClearData();
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            ExportarDatos(dgvInventario);
+        }        
         #region metodos
         private void Add()
         {
@@ -107,7 +137,7 @@ namespace ProyectoFinal
             }
             else if (string.IsNullOrEmpty(txtPrice.Text))
             {
-                MessageBox.Show("Ingrese una contrase;a", "Aviso");
+                MessageBox.Show("Ingrese un precio", "Aviso");
             }
             else if (select == null)
             {
@@ -117,10 +147,16 @@ namespace ProyectoFinal
             {
                 p.ProductName = txtName.Text;
                 p.ProductPrice= txtPrice.Text;
-                p.IdProductType= 0;
+                p.IdProductType= Convert.ToInt32(select.Value); ;
 
                 productService.Add(p);
                 MessageBox.Show("Se Guardo", "Aviso");
+                if (tabPage1.Parent == null)
+                {
+                    tabInventario.TabPages.Insert(0, tabPage1);
+                }
+                tabPage2.Parent = null;
+                tabInventario.SelectedTab = tabPage1;
                 LoadProduct();
                 ClearData();
             }
@@ -135,7 +171,7 @@ namespace ProyectoFinal
             }
             else if (string.IsNullOrEmpty(txtPrice.Text))
             {
-                MessageBox.Show("Ingrese una contrase;a", "Aviso");
+                MessageBox.Show("Ingrese un precio", "Aviso");
             }
             else if (select == null)
             {
@@ -150,6 +186,12 @@ namespace ProyectoFinal
 
                 productService.Edit(p);
                 MessageBox.Show("Se Edito", "Aviso");
+                if (tabPage1.Parent == null)
+                {
+                    tabInventario.TabPages.Insert(0, tabPage1);
+                }
+                tabPage2.Parent = null;
+                tabInventario.SelectedTab = tabPage1;
                 LoadProduct();
                 Deselect();
                 ClearData();
@@ -202,6 +244,15 @@ namespace ProyectoFinal
             }
             else
             {
+                if (tabPage2.Parent == null)
+                {
+                    tabInventario.TabPages.Insert(0, tabPage2);
+
+                }
+                tabPage2.Text = "Editar";
+                tabPage1.Parent = null;
+                tabInventario.SelectedTab = tabPage2;
+
                 Product p = new Product();
                 p = productService.GetId(id.Value);
                 txtName.Text = p.ProductName;
@@ -227,40 +278,33 @@ namespace ProyectoFinal
             txtName.Clear();
             txtPrice.Clear();
             cbCategory.SelectedIndex = 0;
-        }
-        #endregion
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        }        
+        public void ExportarDatos(DataGridView dataGrid)
         {
+            Microsoft.Office.Interop.Excel.Application exportar = new Microsoft.Office.Interop.Excel.Application();
 
-        }
+            exportar.Application.Workbooks.Add(true);
 
-        private void dgvInventario_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnExcel_Click(object sender, EventArgs e)
-        {
-            using(SaveFileDialog sfd = new SaveFileDialog(){ Filter = "Excel Workbook|*.xlsx" })
+            int indicecolum = 0;
+            foreach (DataGridViewColumn column in dataGrid.Columns)
             {
-                if(sfd.ShowDialog() == DialogResult.OK)
+                indicecolum++;
+                exportar.Cells[1, indicecolum] = column.Name;
+
+            }
+            int indicefila = 0;
+            foreach (DataGridViewRow fila in dataGrid.Rows)
+            {
+                indicefila++;
+                indicecolum = 0;
+                foreach (DataGridViewColumn column in dataGrid.Columns)
                 {
-                    try
-                    {
-                        using (XLWorkbook workbook = new XLWorkbook())
-                        {
-                            workbook.Worksheets.Add(this.proyect_tdsDataSet.producto.CopyToDataTable(), "producto");
-                            workbook.SaveAs(sfd.FileName);
-                        }
-                        MessageBox.Show("ha guardado correctamente su documento tipo Excel.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch(Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    indicecolum++;
+                    exportar.Cells[indicefila + 1, indicecolum] = fila.Cells[column.Name].Value;
                 }
             }
+            exportar.Visible = true;
         }
+        #endregion
     }
 }
